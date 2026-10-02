@@ -4,28 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cafeteria Oliveira — um espaço acolhedor, com café artesanal e momentos especiais." />
+    <meta name="description"
+        content="Cafeteria Oliveira — um espaço acolhedor, com café artesanal e momentos especiais." />
     <title>Cafeteria Oliveira</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/style.css" />
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-premium">
             <div class="container">
-                <a class="navbar-brand" href="#home">☕ Cafeteria <span>Oliveira</span></a>
+                <a class="navbar-brand fw-bold" href="#home">
+                    <span class="cafe-icon">☕</span> Cafeteria <span class="brand-highlight">Oliveira</span>
+                </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#historia">História</a></li>
                         <li class="nav-item"><a class="nav-link" href="#ambientes">Ambientes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
@@ -38,170 +43,356 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-premium position-relative overflow-hidden">
+            <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&h=800&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="container position-relative h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-9">
+                        <div class="hero-content-wrapper">
+                            <p class="hero-subtitle text-uppercase letter-spacing mb-4">
+                                <span class="subtitle-line"></span> Bem-vindo <span class="subtitle-line"></span>
+                            </p>
+                            <h1 class="hero-title mb-4">
+                                Um lugar onde a cultura do café<br>se encontra com o acolhimento
+                            </h1>
+                            <p class="hero-description mb-5 mx-auto">
+                                Sabores autênticos, encontros genuínos e momentos inesquecíveis. <br>
+                                Uma experiência sensorial que vai muito além de uma xícara.
+                            </p>
+
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="#historia" class="btn-hero btn-hero-primary">
+                                    <span>Conheça Nossa História</span>
+                                    <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                                <a href="./templates/produtos.html" class="btn-hero btn-hero-secondary">
+                                    <span>Explorar Cardápio</span>
+                                    <i class="fas fa-coffee ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x pb-4">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- HISTÓRIA SECTION -->
+        <section id="historia" class="section-historia py-120">
             <div class="container">
-                <div class="hero-content">
-                    <p class="mini-title">Cafeteria Oliveira</p>
-                    <h1>Um lugar onde a cultura do café se encontra com o acolhimento</h1>
-                    <p class="hero-text">
-                        Sabores, encontros e momentos especiais em um ambiente acolhedor e cheio de tradição.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#historia" class="btn btn-primary">Conheça a história</a>
-                        <a href="./templates/produtos.html" class="btn btn-outline-light">Ver cardápio</a>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="historia-badge mb-4">
+                            <span class="badge-text">Nossa Origem</span>
+                        </div>
+                        <h2 class="section-title mb-4">
+                            A História da <span class="text-highlight">Cafeteria Oliveira</span>
+                        </h2>
+                        <p class="section-paragraph">
+                            A Cafeteria Oliveira nasceu de um sonho simples: criar um refúgio acolhedor onde o café
+                            transcende uma bebida e se torna um ritual de conexão. Tudo começou com a família Oliveira,
+                            guardiã de uma paixão cultivada há gerações.
+                        </p>
+                        <p class="section-paragraph">
+                            Quando percebemos que o bairro carecia de um espaço que combinasse excelência, autenticidade
+                            e acolhimento genuíno, decidimos abrir as portas de nossa história. Aqui, cada xícara conta
+                            uma narrativa, e cada encontro se torna memória.
+                        </p>
+
+                        <div class="quote-destacado mt-5 p-4 border-start-5">
+                            <p class="quote-text mb-2">
+                                "Acreditamos que o café é mais que uma bebida—é uma porta aberta para conversas significativas
+                                e momentos que marcam nossas vidas."
+                            </p>
+                            <p class="quote-author">— Família Oliveira</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="historia-image-container">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a36ae57?w=600&h=700&fit=crop"
+                                alt="Interior da Cafeteria Oliveira" class="img-fluid rounded-4 shadow-premium">
+                            <div class="image-accent position-absolute"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="historia" class="section historia">
+        <!-- AMBIENTES SECTION -->
+        <section id="ambientes" class="section-ambientes py-120 position-relative">
             <div class="container">
-                <div class="historia-content">
-                    <div class="section-badge">
-                        <span class="section-kicker">Como surgiu a ideia do negócio</span>
+                <div class="text-center mb-5">
+                    <div class="ambiente-badge mb-3">
+                        <span class="badge-text">Espaços</span>
                     </div>
-
-                    <h2 class="historia-title">
-                        A história da <span class="highlight">Cafeteria Oliveira</span>
+                    <h2 class="section-title">
+                        Ambientes Pensados para Cada Momento
                     </h2>
+                    <p class="section-subtitle">
+                        Descubra nossos espaços cuidadosamente projetados para proporcionar experiências únicas
+                    </p>
+                </div>
 
-                    <div class="historia-text">
-                        <p>
-                            A Cafeteria Oliveira nasceu da vontade de transformar uma rotina simples em um espaço de
-                            encontro, inspiração e sabor. Tudo começou com a família Oliveira, que durante anos cultivou
-                            uma relação especial com o café.
-                        </p>
+                <div class="carousel-container mt-5">
+                    <div id="carouselAmbientes" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="ambiente-card">
+                                    <div class="ambiente-image" style="background-image: url('https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop');"></div>
+                                    <div class="ambiente-content">
+                                        <h3 class="ambiente-title">Área de Convivência</h3>
+                                        <p class="ambiente-description">
+                                            Mesas aconchegantes, iluminação intimista e ambientes respira inspiração. 
+                                            O local perfeito para conversas profundas, leituras absorventes e momentos de pura contemplação.
+                                        </p>
+                                        <div class="ambiente-features">
+                                            <span class="feature"><i class="fas fa-users"></i> Área Social</span>
+                                            <span class="feature"><i class="fas fa-book"></i> Leitura</span>
+                                            <span class="feature"><i class="fas fa-leaf"></i> Natureza</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <p>
-                            A ideia surgiu quando perceberam que o bairro precisava de um lugar acolhedor, com boa
-                            bebida e atendimento genuíno. Um espaço onde o café era mais do que uma bebida: era uma
-                            forma de celebrar a rotina e a conversa.
-                        </p>
-                    </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="ambiente-card">
+                                    <div class="ambiente-image" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e5a1ad282?w=800&h=600&fit=crop');"></div>
+                                    <div class="ambiente-content">
+                                        <h3 class="ambiente-title">Barra de Café Artesanal</h3>
+                                        <p class="ambiente-description">
+                                            Observa o processo de extração do café com maestria. Nossa barra oferece 
+                                            uma experiência imersiva onde você testemunha a arte e precisão em cada xícara.
+                                        </p>
+                                        <div class="ambiente-features">
+                                            <span class="feature"><i class="fas fa-fire"></i> Preparo ao Vivo</span>
+                                            <span class="feature"><i class="fas fa-flask"></i> Técnica</span>
+                                            <span class="feature"><i class="fas fa-award"></i> Qualidade</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="historia-quote">
-                        <p>"Cada xícara de café é um convite para desacelerar e apreciar a vida."</p>
-                        <span>— Família Oliveira</span>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="ambiente-card">
+                                    <div class="ambiente-image" style="background-image: url('https://images.unsplash.com/photo-1485231143539-5c066ab0b8b2?w=800&h=600&fit=crop');"></div>
+                                    <div class="ambiente-content">
+                                        <h3 class="ambiente-title">Cabines de Foco & Leitura</h3>
+                                        <p class="ambiente-description">
+                                            Refúgios privativos para quem busca serenidade. Cabines elegantes e silenciosas 
+                                            onde o trabalho criativo e a leitura ganham uma dimensão ainda mais profunda.
+                                        </p>
+                                        <div class="ambiente-features">
+                                            <span class="feature"><i class="fas fa-brain"></i> Foco</span>
+                                            <span class="feature"><i class="fas fa-wifi"></i> Conectado</span>
+                                            <span class="feature"><i class="fas fa-moon"></i> Tranquilo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmbientes" data-bs-slide="prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAmbientes" data-bs-slide="next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="ambientes" class="section ambientes">
+        <!-- LOCALIZAÇÃO SECTION -->
+        <section id="localizacao" class="section-localizacao py-120">
             <div class="container">
-                <div class="section-heading text-center">
-                    <p class="section-kicker">Ambientes internos</p>
-                    <h2>Um espaço pensado para cada momento</h2>
-                </div>
-
-                <div id="carouselAmbientes" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="slide-box">
-                                <span>Ambiente 1</span>
-                            </div>
-                            <div class="carousel-caption">
-                                <h3>Área de convivência</h3>
-                                <p>Mesas confortáveis e ambiente acolhedor para conversar e relaxar.</p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="slide-box slide-two">
-                                <span>Ambiente 2</span>
-                            </div>
-                            <div class="carousel-caption">
-                                <h3>Barra de café</h3>
-                                <p>Preparo artesanal e experiência do café em todos os detalhes.</p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="slide-box slide-three">
-                                <span>Ambiente 3</span>
-                            </div>
-                            <div class="carousel-caption">
-                                <h3>Cabines e leitura</h3>
-                                <p>Um cantinho tranquilo para focar, ler e saborear um café em paz.</p>
-                            </div>
-                        </div>
+                <div class="text-center mb-5">
+                    <div class="localizacao-badge mb-3">
+                        <span class="badge-text">Visite-nos</span>
                     </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAmbientes"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAmbientes"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="localizacao" class="section localizacao">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <p class="section-kicker">Localização</p>
-                    <h2>No coração do bairro, perto de quem gosta de bons momentos</h2>
+                    <h2 class="section-title">
+                        No Coração do Bairro
+                    </h2>
+                    <p class="section-subtitle">
+                        Localização estratégica com fácil acesso e um ambiente que respira qualidade
+                    </p>
                 </div>
 
-                <p class="localizacao-text">
-                    A Cafeteria Oliveira está localizada em um ponto estratégico do bairro, com fácil acesso e ambiente
-                    agradável para receber clientes de todas as idades.
-                </p>
-
-                <div class="row justify-content-center g-4 mt-4">
+                <div class="row g-4 justify-content-center">
                     <div class="col-md-5">
-                        <div class="info-card">
+                        <div class="info-card-premium">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
                             <h3>Endereço</h3>
                             <p>Rua das Flores, 245 - Centro</p>
+                            <p class="small text-muted">A poucos passos do metrô e principais pontos turísticos</p>
                         </div>
                     </div>
+
                     <div class="col-md-5">
-                        <div class="info-card">
-                            <h3>Horário</h3>
-                            <p>Segunda a Domingo<br />08h às 21h</p>
+                        <div class="info-card-premium">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p><strong>Segunda a Domingo</strong></p>
+                            <p>08h às 21h</p>
+                            <p class="small text-muted">Aberto todos os dias para você</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center mt-3">
+                    <div class="col-md-5">
+                        <div class="info-card-premium">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Contato</h3>
+                            <p>(11) 99999-8888</p>
+                            <p><a href="mailto:contato@cafeteriaoliveira.com">contato@cafeteriaoliveira.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="info-card-premium">
+                            <div class="info-icon">
+                                <i class="fas fa-parking"></i>
+                            </div>
+                            <h3>Estacionamento</h3>
+                            <p>Convênio com garagem próxima</p>
+                            <p class="small text-muted">Desconto exclusivo para clientes</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="memorial" class="section cafe-history">
+        <!-- MEMORIAL DO CAFÉ SECTION -->
+        <section id="memorial" class="section-memorial py-120 position-relative">
             <div class="container">
-                <div class="section-heading text-center">
-                    <p class="section-kicker">A história do café</p>
-                    <h2>O café ao longo dos tempos</h2>
-                </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="memorial-image-container">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688e566e6?w=600&h=700&fit=crop"
+                                alt="História do Café" class="img-fluid rounded-4 shadow-premium">
+                            <div class="image-badge">
+                                <span class="badge-number">400+</span>
+                                <span class="badge-label">Anos de História</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <p class="cafe-intro">
-                    O café é uma das bebidas mais consumidas do mundo. Suas raízes remontam às terras altas da Etiópia,
-                    atravessando continentes e séculos até chegar ao coração de nossas mesas. Descoberto na Etiópia, o
-                    café evoluiu de um ritual simples para a bebida que conhecemos hoje. Os árabes foram os primeiros a
-                    cultivar o café em larga escala e criaram as primeiras cafeterias, que se tornaram centros de
-                    encontro e convivência. Através de comerciantes, o café chegou à Europa e se democratizou em
-                    diversos continentes, tornando-se parte essencial da cultura global. Hoje, é uma das commodities
-                    mais reconhecidas do mundo. Mais que uma bebida: é cultura, tradição, encontro e arte.
-                </p>
+                    <div class="col-lg-6">
+                        <div class="memorial-badge mb-4">
+                            <span class="badge-text">Legado</span>
+                        </div>
+                        <h2 class="section-title mb-4">
+                            A Jornada do Café Através dos Tempos
+                        </h2>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Etiópia Ancestral</h4>
+                                <p>
+                                    As raízes do café remontam às terras altas da Etiópia, onde a lenda conta que uma 
+                                    cabra descobriu as berries mágicas que trouxeram vitalidade e espírito.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Renascimento Árabe</h4>
+                                <p>
+                                    Os árabes não apenas cultivaram o café em larga escala, mas também criaram as primeiras 
+                                    cafeterias, transformando-as em centros vibrantes de encontro e conhecimento.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Expansão Global</h4>
+                                <p>
+                                    Através de comerciantes e viajantes, o café cruzou continentes, enraizando-se em culturas 
+                                    diversas e tornando-se essencial na vida cotidiana de bilhões.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Presente Artesanal</h4>
+                                <p>
+                                    Hoje celebramos o café não apenas como bebida, mas como arte, conexão e expressão 
+                                    da qualidade de vida que valorizamos na Cafeteria Oliveira.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL SECTION -->
+        <section class="section-cta py-120 position-relative overflow-hidden">
+            <div class="cta-bg" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=600&fit=crop');"></div>
+            <div class="cta-overlay"></div>
+
+            <div class="container position-relative">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title mb-4">
+                            Pronto para Viver a Experiência?
+                        </h2>
+                        <p class="cta-description mb-5">
+                            Venha conhecer nossos ambientes únicos, saborear cafés selecionados com cuidado e 
+                            compartilhar momentos que ficarão para a vida toda.
+                        </p>
+                        <a href="./templates/produtos.html" class="btn-cta">
+                            <span>Explore Nosso Cardápio</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <div class="brand-icon">☕</div>
-                    <div>
-                        <h3>Cafeteria Oliveira</h3>
-                        <p>Café artesanal e momentos especiais.</p>
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <h4 class="mb-3">
+                            <span class="cafe-icon">☕</span> Cafeteria Oliveira
+                        </h4>
+                        <p class="text-muted">
+                            Um espaço onde a excelência do café encontra o acolhimento genuíno.
+                        </p>
                     </div>
                 </div>
 
-                <div>
-                    <h4>Menu</h4>
-                    <ul class="footer-list">
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Menu</h5>
+                    <ul class="footer-links">
                         <li><a href="#home">Início</a></li>
                         <li><a href="#historia">História</a></li>
                         <li><a href="#ambientes">Ambientes</a></li>
@@ -209,26 +400,40 @@
                     </ul>
                 </div>
 
-                <div>
-                    <h4>Contato</h4>
-                    <ul class="footer-list">
-                        <li><span>📍</span> Rua das Flores, 245</li>
-                        <li><span>📞</span> (11) 99999-8888</li>
-                        <li><a href="mailto:contato@cafeteriaoliveira.com"><span>📧</span>
-                                contato@cafeteriaoliveira.com</a></li>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Contato</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Rua das Flores, 245</li>
+                        <li><i class="fas fa-phone me-2"></i> (11) 99999-8888</li>
+                        <li><a href="mailto:contato@cafeteriaoliveira.com"><i class="fas fa-envelope me-2"></i> E-mail</a></li>
                     </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="footer-title">Redes Sociais</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-divider"></div>
+            <div class="footer-divider my-4"></div>
 
-            <div class="footer-bottom">
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram" title="Instagram">Instagram</a>
-                    <a href="#" aria-label="Facebook" title="Facebook">Facebook</a>
-                    <a href="#" aria-label="WhatsApp" title="WhatsApp">WhatsApp</a>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted small mb-0">© 2026 Cafeteria Oliveira. Todos os direitos reservados.</p>
                 </div>
-                <p>© 2026 Cafeteria Oliveira. Todos os direitos reservados.</p>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted small mb-0">Desenvolvido com <i class="fas fa-heart text-danger"></i> para você</p>
+                </div>
             </div>
         </div>
     </footer>
